@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:padding="20dp">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_weburl"
+                android:text="Web Url:"
+                android:textSize="18sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@id/text_inputurl"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_inputurl"
+                android:ems="8"
+                android:inputType="textWebEditText"
+                android:text="https://www.google.com"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text_weburl"
+                app:layout_constraintEnd_toStartOf="@id/button_browser"/>
+
+            <Button
+                android:id="@+id/button_browser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Browse"
+                app:layout_constraintTop_toTopOf="@id/text_inputurl"
+                app:layout_constraintStart_toEndOf="@id/text_inputurl"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/text_phonenumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Phone number:"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_weburl" />
+
+            <EditText
+                android:id="@+id/edittext_phonenumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="8"
+                android:inputType="phone"
+                android:text="9999999999"
+                app:layout_constraintStart_toEndOf="@id/text_phonenumber"
+                app:layout_constraintEnd_toStartOf="@id/button_call"
+                app:layout_constraintBaseline_toBaselineOf="@id/text_phonenumber"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_call"
+                android:text="Call"
+                app:layout_constraintEnd_toEndOf="@id/button_browser"
+                app:layout_constraintStart_toEndOf="@id/edittext_phonenumber"
+                app:layout_constraintBaseline_toBaselineOf="@id/edittext_phonenumber"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_calllog"
+                android:text="Call Log:"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_phonenumber"
+                android:layout_marginTop="40dp"/>
+
+            <Button
+                android:id="@+id/button_calllog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call log"
+                app:layout_constraintEnd_toEndOf="@id/button_call"
+                app:layout_constraintBaseline_toBaselineOf="@id/text_calllog"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_gallery"
+                android:text="Gallery:"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_calllog"
+                android:layout_marginTop="40dp"/>
+
+            <Button
+                android:id="@+id/button_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gallery"
+                app:layout_constraintEnd_toEndOf="@id/button_calllog"
+                app:layout_constraintBaseline_toBaselineOf="@id/text_gallery"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_camera"
+                android:text="Camera:"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_gallery"
+                android:layout_marginTop="40dp"/>
+
+            <Button
+                android:id="@+id/button_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Camera"
+                app:layout_constraintEnd_toEndOf="@id/button_gallery"
+                app:layout_constraintBaseline_toBaselineOf="@id/text_camera"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_alarm"
+                android:text="Alarm:"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_camera"
+                android:layout_marginTop="40dp"/>
+
+            <Button
+                android:id="@+id/button_alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alarm"
+                app:layout_constraintEnd_toEndOf="@id/button_camera"
+                app:layout_constraintBaseline_toBaselineOf="@id/text_alarm"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
